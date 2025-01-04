@@ -7,7 +7,8 @@ car_data = pd.read_csv(path)
 
 st.header('Análise exploratoria de dados - Vendas dos Veículos')
 
-hist_button = st.button('Criar histograma')  # criar um botão
+st.write('- Clique no botão abaixo para visualizar as informações em formato de Histograma')
+hist_button = st.button('Histograma')  # criar um botão
 if hist_button:  # Se o botão for clicado
     # Mensagem inicial
     st.write(
@@ -36,8 +37,8 @@ if hist_button:  # Se o botão for clicado
     # Exibir o gráfico Plotly interativo
     st.plotly_chart(fig, use_container_width=True)
 
+st.write('- Selecione a caixa de texto abaixo para visualizar as informações em formato de Gráfico de Dispersão')
 disp_button = st.checkbox('Criar gráfico de dispersão')
-
 if disp_button:
     # Mensagem inicial
     st.write(
